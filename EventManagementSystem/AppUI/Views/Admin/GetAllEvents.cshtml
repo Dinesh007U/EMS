@@ -1,0 +1,265 @@
+﻿@{
+    // Setting the title for the page
+    ViewData["Title"] = "Admin Home";
+}
+
+<!-- Heading for the page -->
+<h2 id="heading" class="my-3">All Event Details</h2>
+<hr />
+
+<!-- Container for event-related content -->
+ <div class="custom-event-container pt-4">
+    <!-- Button to add events -->
+    <a asp-route="AddEvents" class="btn btn-primary mb-3">Add Events <i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+    <!-- Button to search events -->
+    <a asp-route="SearchEvents" class="btn btn-primary mb-3">Search Events <i class="fa fa-search mx-1" aria-hidden="true"></i></a>
+
+    <!-- Table to display event details -->
+    <table id="mytable">
+        <tr>
+            <th>S.No</th>
+            <th>Event Details</th>
+        </tr>
+    </table>
+</div>
+
+
+
+<!-- Delete Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Confirm Delete</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Element to display the event name -->
+                <p id="eventNameToDelete"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+@* Get All Events *@
+<script>
+    // Event listener for the search button input
+    $(document).ready(function () {
+        $('#SearchButton').on('input', function () {
+            // Retrieve input value and convert to lowercase
+            var input = $(this).val().trim().toLowerCase();
+            console.log(input);
+            // AJAX request to fetch all event details
+            $.ajax({
+                url: 'http://localhost:53045/api/EventDetails/GetAllEventDetails',
+                type: 'GET',
+                success: function (events) {
+                    // Filter events based on input criteria
+                    var filteredevents = events.filter(function (event) {
+                        return event.eventName.toLowerCase().includes(input) || event.eventCategory.toLowerCase().includes(input);
+                    });
+                    // Update event table with filtered events
+                    updateEventTable(filteredevents);
+                },
+                error: function () {
+                    console.error("Error in search");
+                }
+            });
+        });
+
+        // Function to update the event table with filtered events
+        function updateEventTable(filteredevents) {
+            // Clear existing table content
+            $('#mytable').empty();
+            // Clear existing table content
+            var counter = 1;
+            var titleAdded = false;
+            // Loop through filtered events
+            $.each(filteredevents, function (index, event) {
+
+                if (!titleAdded) {
+                    var title = '<tr><th>S.No</th><th> Event Details</th></tr>'
+                    $('#mytable').append(title);
+                    titleAdded = true;
+                } // Determine status color based on event status
+                var statusColor = event.status.toLowerCase() === 'active' ? 'text-success' : 'text-danger';
+                // Construct HTML for event accordion
+                var accordionHtml = `
+                                                            <tr>
+                                                                 <td class="accordion-tds">
+                                                                    ${counter++}
+                                                                </td>
+                                                                <td class="set-accordion-width accordion-tds">
+                                                                    <div class="accordion" id="accordion-container">
+                                                                        <div class="accordion-item">
+                                                                            <h2 class="accordion-header">
+                                                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${index}" aria-expanded="false" aria-controls="collapse${index}">
+                                                                                   ${event.eventName}
+                                                                                </button>
+                                                                            </h2>
+                                                                            <div id="collapse${index}" class="accordion-collapse collapse" data-bs-parent="#accordion-container">
+                                                                                <div class="accordion-body">
+                                                                                    <strong class="acc-content1"> <i class="fa fa-calendar" aria-hidden="true"></i> ${formatDate(event.eventDate)} </strong> <br>
+                                                                                    <strong class="acc-content2"> <i class="fa fa-globe" aria-hidden="true"></i> ${event.eventCategory} </strong> <br>
+                                                                                    <p class="acc-content3"> <i class="fa fa-info-circle" aria-hidden="true"></i> ${event.description} </p> <br>
+                                                                                        <p class="acc-content4 ${statusColor}"> <i class="fa fa-hourglass-start" aria-hidden="true"></i> ${event.status} </p> <br>
+                                                                                    <button class="btn btn-success view-sessions-btn" data-id="${event.eventId}"> View Sessions <i class="fa fa-info-circle" aria-hidden="true"></i> </button>
+                                                                                    <button class="btn btn-primary edit-event-btn" data-id="${event.eventId}"> Edit Event <i class="fa fa-pencil-square-o" aria-hidden="true"></i> </button>
+                                                                                    <button class="btn btn-danger delete-event-btn" data-id="${event.eventId}" data-name="${event.eventName}"> Delete Event <i class="fa fa-trash" aria-hidden="true"></i> </button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>`;
+
+                // Append the accordion HTML to the table
+                $('#mytable').append(accordionHtml);
+            });
+            function formatDate(dateTimeString) {
+                const date = new Date(dateTimeString);
+                const options = { day: '2-digit', month: 'short', year: 'numeric' };
+                return date.toLocaleDateString('en-US', options);
+            }
+
+            $(document).on('click', '.cancel-search-box', function () {
+                document.getElementById('SearchButton').value = '';
+
+                // Trigger input event to reload all events
+                $('#SearchButton').trigger('input');
+            });
+
+        }
+        $(document).on('click', '.edit-event-btn', function () {
+            // Retrieve the event ID from the clicked button's data-id attribute
+            var eventId = $(this).data('id');
+
+            // Log the event ID to the console (for demonstration)
+            console.log("Event ID:", eventId);
+            window.location.href = "/Admin/UpdateEvents/" + eventId;
+
+        });
+
+        //View All Sessions
+        $(document).on('click', '.view-sessions-btn', function () {
+            var eventId = $(this).data('id');
+            console.log("Event ID:", eventId);
+            window.location.href = "/Admin/GetAllSession/" + eventId;
+        });
+
+        // Search
+        // AJAX request to fetch all event details from the server
+        $.ajax({
+            url: 'http://localhost:53045/api/EventDetails/GetAllEventDetails',
+            method: 'GET',
+            success: function (data) {
+                // Clear existing accordion content               
+                $('#accordion-container').empty();
+
+                // Counter for serial number
+                var counter = 1;
+                // Loop through each event data received
+                $.each(data, function (index, event) {
+                    // Determine status color based on event status
+                    var statusColor = event.status.toLowerCase() === 'active' ? 'text-success' : 'text-danger';
+                    // Construct HTML for accordion item
+                    var accordionHtml = `
+                                                 <tr>
+                                                     <td class="accordion-tds">
+                                                        ${counter++}
+                                                    </td>
+                                                    <td class="set-accordion-width accordion-tds">
+                                                        <div class="accordion" id="accordion-container">
+                                                            <div class="accordion-item">
+                                                                <h2 class="accordion-header">
+                                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${index}" aria-expanded="false" aria-controls="collapse${index}">
+                                                                       ${event.eventName}
+                                                                    </button>
+                                                                </h2>
+                                                                <div id="collapse${index}" class="accordion-collapse collapse" data-bs-parent="#accordion-container">
+                                                                    <div class="accordion-body">
+                                                                        <strong class="acc-content1"> <i class="fa fa-calendar" aria-hidden="true"></i> ${formatDate(event.eventDate)} </strong> <br>
+                                                                        <strong class="acc-content2"> <i class="fa fa-globe" aria-hidden="true"></i> ${event.eventCategory} </strong> <br>
+                                                                        <p class="acc-content3"> <i class="fa fa-info-circle" aria-hidden="true"></i> ${event.description} </p> <br>
+                                                                        <p class="acc-content4 ${statusColor}"> <i class="fa fa-hourglass-start" aria-hidden="true"></i> ${event.status} </p> <br>
+                                                                        <button class="btn btn-success view-sessions-btn" data-id="${event.eventId}"> View Sessions <i class="fa fa-info-circle" aria-hidden="true"></i> </button>
+                                                                        <button class="btn btn-primary edit-event-btn" data-id="${event.eventId}"> Edit Event <i class="fa fa-pencil-square-o" aria-hidden="true"></i> </button>
+                                                                        <button class="btn btn-danger delete-event-btn" data-id="${event.eventId}" data-name="${event.eventName}"> Delete Event <i class="fa fa-trash" aria-hidden="true"></i> </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>`;
+
+                    // Append the accordion HTML to the table
+                    $('#mytable').append(accordionHtml);
+                });
+
+                // Function to format date
+                function formatDate(dateTimeString) {
+                    const date = new Date(dateTimeString);
+                    const options = { day: '2-digit', month: 'short', year: 'numeric' };
+                    return date.toLocaleDateString('en-US', options);
+                }
+                // Check if all accordion panels are added
+                var allPanelsAdded = ($('#accordion-container .accordion-item').length === data.length);
+
+                if (allPanelsAdded) {
+                    new bootstrap.Collapse(document.getElementById('accordion-container'), {
+                        toggle: false // Ensures accordion panels start closed
+                    });
+                }
+            },
+            error: function (error) {
+                console.error('Error:', error);
+            }
+        });
+    });
+    $(document).ready(function () {
+        // Event listener for delete button
+        $(document).on('click', '.delete-event-btn', function () {
+            // Retrieve the event ID and name from the clicked button's data attributes
+            var eventId = $(this).data('id');
+            var eventName = $(this).data('name');
+            // Set the event name in the modal
+            $('#eventNameToDelete').text('Are you sure you want to delete the event ' + eventName + '?');
+
+            $('#confirmDeleteBtn').data('id', eventId);
+            // Open the Bootstrap modal
+            $('#deleteModal').modal('show');
+        });
+
+        // Event listener for delete button inside the modal
+        $('#confirmDeleteBtn').on('click', function () {
+            var token = '@ViewBag.tokenId'
+
+            var eventId = $(this).data('id'); // Retrieve the event ID from the button
+            console.log(eventId);
+            $.ajax({
+                url: 'http://localhost:53045/api/EventDetails/RemoveEventDetails/' + eventId,
+                method: 'DELETE',
+                beforeSend: function (xhr) {
+                    xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+                },
+                success: function (response) {
+                    $('#deleteModal').modal('hide');
+                    // Remove the deleted event from the UI
+                    $('#collapse' + eventId).closest('.accordion-item').remove();
+                    window.location.href = "/Admin/GetAllEvents";
+                },
+                error: function (xhr, status, error) {
+                    console.error('Error deleting event:', error);
+                    alert('Failed to delete event. Please try again later.');
+                }
+            });
+        });
+    });
+</script>

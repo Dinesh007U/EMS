@@ -1,0 +1,240 @@
+﻿@model AppUI.Models.EventDetails;
+
+@{
+    // Set the title for the page
+    ViewData["Title"] = "Add Events";
+}
+
+
+
+<style>
+    /* CSS styles for the UI elements */
+    .card {
+        padding: 0px 15px;
+        border-radius: 20px;
+    }
+
+    .c1 {
+        background-color: #fff2f1;
+        border-radius: 20px;
+    }
+
+    
+
+    input,
+    button {
+        width: 100%;
+        background-color: #fff2f1;
+        border-radius: 8px;
+        padding: 8px 17px;
+        font-size: 13px;
+        border: 1px solid #f5f0ef;
+        color: #dccece;
+    }
+
+    .bt {
+        background-color: #ff4133;
+        border: 1px solid rgb(300, 200, 200);
+    }
+
+    form {
+        margin-top: 40px;
+        
+    }
+
+        form > * {
+            margin: 3px 0px;
+        }
+
+    .img-illus {
+        background-color: antiquewhite;
+    }
+
+    .wlcm {
+        font-size: 30px;
+    }
+
+    .sp1 {
+        font-size: 5px;
+    }
+
+        .sp1 > span {
+            background-color: #f0c3be;
+        }
+
+    .btn-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+</style>
+<!-- Container-->
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-12 col-sm-10 col-md-12 col-lg-11 col-xl-10">
+            <div class="card d-flex mx-auto my-5">
+                <div class="row">
+                    <div class="col-md-5 col-sm-12 col-xs-12 c1 p-5">
+                        <!-- Display an image -->
+                        <div class="w-100 text-center mb-4">
+                            <img class="img-illus" src="~/Images/illus4.png" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);" class="img-fluid" alt="Teacher">
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="w-75 mx-md-5 mx-1 mx-sm-2 mb-5 mt-4 px-sm-5 px-md-2 px-xl-1 px-2">
+                                <h1 class="wlcm">Add New Events</h1>
+                                <!-- Display some placeholders -->
+                                <span class="sp1">
+                                    <span class="px-3 bg-danger rounded-pill"></span>
+                                    <span class="ml-2 px-1 rounded-circle"></span>
+                                    <span class="ml-2 px-1 rounded-circle"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-7 col-sm-12 col-xs-12 c2 px-5 pt-5">
+                        <!-- Form for adding new events -->
+                        <form id="eventform" asp-route="AddEvents" method="post">
+                            <!-- Hidden field for EventId -->
+                            <div class="form-group my-2" style="display:none">
+                                <label asp-for="EventId" class="form-label">Event ID :</label>
+                                <input asp-for="EventId" value=@Guid.NewGuid() type="text" placeholder="Enter Event ID" class="form-control" id="eventid">
+                            </div>
+                            <!-- Dropdown for selecting Event Category -->
+
+                            <div class="form-group my-2">
+                                <label asp-for="EventCategory" class="form-label">Event Category :</label>
+                                <select asp-for="EventCategory" class="form-control" id="eventCategory">
+                                    <option selected disabled>Select Event Category</option>
+                                    <option value="Tech and Innovation">Tech and Innovation</option>
+                                    <option value="Industries">Industries</option>
+                                </select>
+                                <div><span asp-validation-for="EventCategory" class="text-danger mx-2"></span></div>
+                            </div>
+                            <!-- Dropdown for selecting Event Name based on Event Category -->
+                            <div class="form-group my-2" id="eventNameDropdownGroup">
+                                <label asp-for="EventName" class="form-label">Event Name :</label>
+                                <select asp-for="EventName" class="form-control" id="eventNameDropdown">
+                                    <option selected disabled>Select Event Name</option>
+                                    <optgroup id="techInnovationOptions" label="Tech and Innovation" style="display: block;">
+                                        <option value="Microsoft Cloud">Microsoft Cloud</option>
+                                        <option value="AI">AI</option>
+                                        <option value="Azure Space">Azure Space</option>
+                                        <option value="Mixed reality">Mixed reality</option>
+                                        <option value="Microsoft HoloLens">Microsoft HoloLens</option>
+                                        <option value="Microsoft Viva">Microsoft Viva</option>
+                                        <option value="Quantum computing">Quantum computing</option>
+                                        <option value="Sustainability">Sustainability</option>
+                                    </optgroup>
+                                    <optgroup id="industriesOptions" label="Industries" style="display: none;">
+                                        <option value="Education">Education</option>
+                                        <option value="Automotive">Automotive</option>
+                                        <option value="Financial services">Financial services</option>
+                                        <option value="Government">Government</option>
+                                        <option value="Healthcare">Healthcare</option>
+                                        <option value="Manufacturing">Manufacturing</option>
+                                        <option value="Retail">Retail</option>
+                                        <option value="All industries">All industries</option>
+                                    </optgroup>
+                                </select>
+                                <div><span asp-validation-for="EventName" class="text-danger mx-2"></span></div>
+                            </div>
+                            <!-- Input field for Event Date -->
+                            <div class="form-group my-2">
+                                <label asp-for="EventDate" class="form-label">Event Date :</label>
+                                <input asp-for="EventDate" type="date" class="form-control" id="eventDate">
+                                <div><span asp-validation-for="EventDate" class="text-danger mx-2"></span></div>
+                            </div>
+                            <!-- Textarea for Description -->
+                            <div class="form-group my-2">
+                                <label asp-for="Description" class="form-label">Description :</label>
+                                <textarea asp-for="Description" class="form-control" id="description" rows="3"></textarea>
+                                <div><span asp-validation-for="Description" class="text-danger mx-2"></span></div>
+                            </div>
+                            <!-- Dropdown for Event Status -->
+                            <div class="form-group my-2">
+                                <label asp-for="Status" class="form-label">Status :</label>
+                                <select asp-for="Status" class="form-control" id="status">
+                                    <option selected disabled>Select Event Status</option>
+                                    <option value="Active">Active</option>
+                                    <option value="In-Active">In-Active</option>
+                                </select>
+                                <div><span asp-validation-for="Status" class="text-danger mx-2"></span></div>
+                            </div>
+                            <!-- Buttons for submitting and resetting the form -->
+                            <div class="btn-group">
+                                <button type="submit" class="btn btn-primary ">Add Event</button>
+                                <button type="reset" class="btn btn-danger">Reset</button>
+                            </div>
+
+                            <br />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        var bearerToken = '@ViewBag.tokenId'
+
+        // Submit form using AJAX
+        $("#eventform").submit(function () {
+            // Get form data
+            var formData = {
+                EventId: $('#eventid').val(),
+                EventCategory: $('#eventCategory').val(),
+                EventName: $('#eventNameDropdown').val(),
+                EventDate: $('#eventDate').val(),
+                Description: $('#description').val(),
+                Status: $('#status').val()
+            };
+
+            // Send POST request
+            $.ajax({
+                type: 'POST',
+                url: "http://localhost:53045/api/EventDetails/SaveEventDetails",
+                data: JSON.stringify(formData),
+                contentType: 'application/json',
+                beforeSend: function (xhr) {
+                    xhr.setRequestHeader('Authorization', 'Bearer ' + bearerToken);
+                },
+                success: function (data) {
+                    // Handle success
+                    console.log('Event added successfully');
+                },
+                error: function (error) {
+                    // Handle error
+                    console.error('Error adding event:', error);
+                }
+            });
+        });
+
+        // Function to change event name dropdown
+        function changeEventNameDropdown() {
+            var eventCategory = $('#eventCategory').val();
+            var techInnovationOptions = $('#techInnovationOptions');
+            var industriesOptions = $('#industriesOptions');
+
+            if (eventCategory === "Tech and Innovation") {
+                techInnovationOptions.show();
+                industriesOptions.hide();
+            } else if (eventCategory === "Industries") {
+                industriesOptions.show();
+                techInnovationOptions.hide();
+            } else {
+                techInnovationOptions.hide();
+                industriesOptions.hide();
+            }
+        }
+
+        // Call the function to handle the event category change initially
+        changeEventNameDropdown();
+
+        // Add event listener for event category dropdown change
+        $('#eventCategory').change(function () {
+            changeEventNameDropdown();
+        });
+    });
+</script>

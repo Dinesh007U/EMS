@@ -1,0 +1,272 @@
+﻿@{
+    ViewData["Title"] = "MicrosoftEvents";
+    Layout = "~/Views/CommonPage/Shared/CommonPageLayout.cshtml";
+
+}
+
+
+<script>
+    $(document).ready(function () {
+        // Function to fetch events data from the Web API and populate the carousel
+        $(document).on('click', '.custom-register-btn', function () {
+            var eventId = $(this).data('eventId');
+            registerEvent(eventId);
+        });
+        function fetchEventsForCarousel() {
+            $.ajax({
+                url: 'http://localhost:53045/api/eventDetails/GetAllEventDetails',
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    console.log(data);
+                    data = data.slice(0, 8);
+                    // Clear existing carousel items
+                    $('.carousel-inner').empty();
+                    // Split the events into chunks of 4
+                    var chunks = chunkArray(data, 4);
+
+                    // Populate the carousel with chunks of 4 events
+                    chunks.forEach(function (chunk, index) {
+                        var activeClass = index === 0 ? 'active' : '';
+                        var carouselItem = '<div class="carousel-item ' + activeClass + '"><div class="container"><div class="row">';
+                        chunk.forEach(function (event, eventIndex) {
+                            var imageIndex = (index * 4) + eventIndex + 1;
+                            var imageUrl = `/Images/Ms-Event${imageIndex}.jpg`; // Construct the image URL
+                            carouselItem += `
+                                                <div class="col-md-3">
+                                                    <div class="card bg-black text-light">
+                                                        <img src="${imageUrl}" class="card-img-top" alt="Event Image">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">${event.eventName}</h5>
+                                                            <p class="card-text"><i class="fa fa-calendar" aria-hidden="true"></i> ${new Date(event.eventDate).toDateString()}</p>
+                                                            <p class="card-text"><i class="fa fa-globe" aria-hidden="true"></i> ${event.eventCategory}</p>
+                                                            <p class="card-text">${event.description}</p>
+                                                            <a href="#" data-event-id="${event.eventId}" class="custom-register-btn z-3">Register Today <i class="fa fa-angle-right mx-1"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>`;
+                        });
+                        carouselItem += '</div></div></div>';
+                        $('.carousel-inner').append(carouselItem);
+                    });
+
+                    // Show the carousel controls
+                    $('.carousel-control-prev, .carousel-control-next').show();
+                },
+                error: function (xhr, status, error) {
+                    console.error('Error fetching events:', error);
+                }
+            });
+        }
+
+        // Function to split array into chunks of a specific size
+        function chunkArray(arr, size) {
+            var chunks = [];
+            for (var i = 0; i < arr.length; i += size) {
+                chunks.push(arr.slice(i, i + size));
+            }
+            return chunks;
+        }
+
+        // Call fetchEventsForCarousel function when the document is ready
+        fetchEventsForCarousel();
+        function registerEvent(eventId) {
+            // Use eventId to construct the registration URL
+            var registrationUrl = '/ParticipantLogin/AzureLogin';
+
+            // Redirect the user to the registration URL or perform any other action
+            window.location.href = registrationUrl;
+        }
+    });
+
+
+
+
+    $(document).ready(function () {
+        // Event delegation for dynamically generated buttons
+        $(document).on('click', '.custom-register', function () {
+            var eventId = $(this).data('eventId');
+            registerEvent(eventId);
+        });
+
+
+
+        // Function to fetch events data from the Web API
+        function fetchEvents() {
+            $.ajax({
+                url: 'http://localhost:53045/api/eventDetails/getalleventdetails',
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    // Filter the events by category "Tech and Innovation" and select the first three
+                    var techEvents = data.filter(function (event) {
+                        return event.eventName === 'AI' || event.eventName === 'Microsoft Cloud' || event.eventName === 'Azure Space';
+                    }).slice(0, 3);
+
+                    // Filter the events by category "Industries" and select the first three
+                    var industryEvents = data.filter(function (event) {
+                        return event.eventName === 'Healthcare' || event.eventName === 'Education' || event.eventName === 'Financial services';
+                    }).slice(0, 3);
+
+                    // Clear existing event cards
+                    $('#events-container').empty();
+
+                    // Create cards for Tech and Innovation events
+                    createEventCards(techEvents, '#events-container');
+
+                    // Create cards for Industries events
+                    createEventCards(industryEvents, '#industry-events-container');
+                },
+                error: function (xhr, status, error) {
+                    console.error('Error fetching events:', error);
+                }
+            });
+        }
+
+        // Function to create event cards and append them to the specified container
+        function createEventCards(events, container) {
+            events.forEach(function (event) {
+                var imageUrl = '/Images/' + event.eventName + '.jpg';
+                var eventDate = new Date(event.eventDate);
+                var formattedDate = eventDate.toDateString();
+                var eventCard = `
+                                        <div class="col-md-4">
+                                            <div class="card bg-light text-dark">
+                                                <img src="${imageUrl}" class="card-img-top tech-img" alt="Event Image">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">${event.eventName}</h5>
+                                                    <p class="card-text"><i class="fa fa-calendar" aria-hidden="true"></i> ${formattedDate}</p>
+                                                    <p class="card-text"><i class="fa fa-globe" aria-hidden="true"></i> ${event.eventCategory}</p>
+                                                    <p class="card-text card-text-description">${event.description}</p>
+                                                    <a  data-event-id="${event.eventId}" class="btn btn-primary custom-register">Registration and Details <i class="fa fa-angle-right mx-1"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>`;
+                $(container).append(eventCard);
+            });
+        }
+
+        // Call fetchEvents function when the document is ready
+        fetchEvents();
+
+        function registerEvent(eventId) {
+            // Use eventId to construct the registration URL
+            var registrationUrl = '/ParticipantLogin/AzureLogin';
+
+            // Redirect the user to the registration URL or perform any other action
+            window.location.href = registrationUrl;
+        }
+    });
+</script>
+
+<!-- Intro Part Starts here -->
+
+<div id="banner">
+
+    <div id="text-container">
+        <h1 class="fs-2">Explore the full events catalog</h1>
+        <p>With events focused on everything from high-level innovations to hands-on workshops, there's something for everyone.</p>
+        <a asp-route="EventCatalogue" class="p-2 px-3 text-decoration-none custom-searchcatalog">Search Catalog <i class="fa fa-angle-right mx-1"></i></a>
+    </div>
+
+    <div id="video-container" onclick="playVideo()">
+        <!-- Thumbnail image -->
+        <img id="thumbnail" src="~/Images/Ms-Thumbnail.jpg" alt="Thumbnail Image">
+
+        <!-- Video element -->
+        <video id="myVideo" controls style="display: none;">
+            <source src="~/Images/Ms-Video.mp4" type="video/mp4">
+
+        </video>
+    </div>
+
+</div>
+
+<!-- Intro Part Ends here -->
+<!-- Carousel Part Starts here -->
+
+<div id="Global-Exp" class="text-center text-light my-5">
+    <h1 class="pt-4">Must-see global experiences</h1>
+    <p>Explore our biggest and most spectacular events, with industry thought leaders, innovative ideas, and chances to connect with the worldwide community.</p>
+</div>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="5000">
+    <ol class="carousel-indicators">
+        <!-- Carousel indicators will be populated dynamically -->
+    </ol>
+    <div class="carousel-inner">
+        <!-- Carousel items will be populated dynamically -->
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon custom-prev" aria-hidden="true"></span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon custom-next" aria-hidden="true"></span>
+    </a>
+</div>
+<!-- Carousel Part Ends here -->
+<!-- Carousel Part Ends here -->
+<div id="event-container">
+    <div>
+        <h1 class="text-center pt-5">Discover events for your role</h1>
+        <p class="text-center pt-2 pb-3">Here are just a few of the events we offer in our catalog. Browse the categories below to discover the experiences best suited for you.</p>
+    </div>
+
+    <div>
+        <div class="container">
+
+            <h2 class="custom-tech my-4">Tech and Innovations</h2>
+            <div class="row" id="events-container">
+                <!-- Event cards for Tech and Innovations will be dynamically added here -->
+            </div>
+        </div>
+
+        <div class="container">
+            <h2 class="custom-tech my-4">Industries</h2>
+            <div class="row" id="industry-events-container">
+                <!-- Event cards for Industries will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--Featured partner -->
+<div class="featured-partner">
+    <h1>Become a featured partner</h1>
+    <p>Tell your story, reach your audience, and fulfill your business goals. Discover the targeted engagement opportunities of event sponsorship.</p>
+</div>
+
+<div class="container media-container">
+    <h2 class="fs-4 py-4">Share this page : </h2>
+    <a href=""><img src="~/Images/Ms-fb.svg" alt="fb" class="media-icon"></a>
+    <a href=""><img src="~/Images/Ms-twitter.svg" alt="fb" class="media-icon"></a>
+    <a href=""><img src="~/Images/Ms-LinkedIn.svg" alt="fb" class="media-icon"></a>
+</div>
+
+
+
+
+<script>
+    function playVideo() {
+        var thumbnail = document.getElementById('thumbnail');
+        var video = document.getElementById('myVideo');
+
+        // Hide the thumbnail image
+        thumbnail.style.display = 'none';
+        // Show the video element
+        video.style.display = 'block';
+
+        // Play the video
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
+        }
+    }
+</script>
+
+
+
+

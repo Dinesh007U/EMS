@@ -1,0 +1,180 @@
+﻿@model List<AppUI.Models.SpeakersDetails>
+
+@{
+    ViewData["Title"] = "GetAllSpeakers";
+}
+
+<h4 id="heading">All Speaker Details</h4>
+<hr />
+
+<!-- Container for speaker details -->
+<div class="container pt-5">
+    <div>
+        <!-- Buttons for adding a new speaker and displaying total speakers -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <button type="button" class="btn btn-secondary" id="addSpeakerBtn" data-bs-toggle="modal" data-bs-target="#addSpeakerModal">
+                <i class="bi bi-plus-square-fill"></i> New Speaker
+            </button>
+            <div>
+                <a class ="btn btn-primary">
+                    Total Speakers: <span class="badge bg-secondary">@Model.Count</span>
+                    </a>
+            </div>
+        </div>
+        
+
+
+        <!-- Modal for Adding speaker Details -->
+        <div class="modal fade" id="addSpeakerModal" tabindex="-1" aria-labelledby="addSpeakerModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addNewSpeakerLabel">Add New Speaker</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="addSpeakerForm" asp-route="AddSpeaker" method="post">
+                            <div class="form-group" style="display:none">
+                                <label for="SpeakerId" class="form-label">Speaker ID :</label>
+                                <input type="text" value=@Guid.NewGuid() name="speakerId" class="form-control" id="eventid">
+                            </div>
+                            <div class="form-group">
+                                <label for="speakerName" class="mb-2">Enter Speaker Name</label>
+                                <input type="text" class="form-control" id="speakerName" name="speakerName">
+                            </div>
+                            <div class="mt-3 d-flex justify-content-end gap-2">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary" id="saveSpeakerBtn">Add Speaker</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Modal for updating speaker Details -->
+        <div class="modal fade" id="editSpeakerModal" tabindex="-1" role="dialog" aria-labelledby="editSpeakerModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editSpeakerModalLabel">Edit Speaker</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                    </div>
+                    <form asp-route="UpdateSpeakerDetails" method="post">
+
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="SpeakerId" id="editSpeakerid" hidden>
+
+                                <label for="editSpeakerName">Speaker Name:</label>
+                                <input type="text" name="SpeakerName" class="form-control" id="editSpeakerName" required>
+                                <span class="error-msg text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary" id="saveChangesBtn">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for Deleting speaker Details -->
+        <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="deleteModalLabel">Confirm Deletion</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Are you sure you want to delete <span id="speakerNamePlaceholder"></span>?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger" id="confirmDelete">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped text-center">
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Speaker Name</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        var counter = 1;
+                        foreach (var eventInfo in Model)
+                        {
+                            <tr>
+                                <td>@counter</td>
+                                <td>@eventInfo.SpeakerName</td>
+                                <td>
+                                    <button class="btn btn-primary edit-speaker-btn" data-id="@eventInfo.SpeakerId" data-name="@eventInfo.SpeakerName"> <i class="bi bi-pencil-square"></i></button>
+                                    <button class="btn btn-danger delete-speaker-btn" data-id="@eventInfo.SpeakerId" data-name="@eventInfo.SpeakerName"><i class="bi bi-trash"></i></button>
+                                </td>
+                            </tr>
+                            counter++;
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        
+        // Functionality when the add speaker button is clicked
+        $('#addSpeakerBtn').click(function () {
+            // Show the add speaker modal
+            $('#addSpeakerModal').modal('show');
+        });
+        // Functionality when the edit speaker button is clicked
+        $('.edit-speaker-btn').click(function () {
+            var speakerId = $(this).data('id');
+            var speakerName = $(this).data('name');
+            console.log(speakerId);
+            $('#editSpeakerName').val(speakerName);
+            $('#editSpeakerid').val(speakerId);
+            $('#editSpeakerModal').modal('show');
+
+
+        });
+
+        $(".delete-speaker-btn").click(function () {
+            var speakerId = $(this).data("id");
+            var speakerName = $(this).data("name");
+
+            // Set speaker name in modal
+            $("#speakerNamePlaceholder").text(speakerName);
+
+            // Store speaker ID  input inside the modal
+            $('#confirmDelete').data('id', speakerId);
+            console.log(speakerId);
+            // Show the modal
+            $("#deleteModal").modal("show");
+        });
+
+
+        // When confirm delete button is clicked
+        $("#confirmDelete").click(function () {
+            var eventId = $(this).data('id');
+            // Hide the modal
+            $("#deleteModal").modal("hide");
+            window.location.href = "/Admin/DeleteSpeaker/" + eventId;
+        });
+    });
+
+</script>
