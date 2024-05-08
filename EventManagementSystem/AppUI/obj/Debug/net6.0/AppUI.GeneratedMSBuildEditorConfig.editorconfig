@@ -1,0 +1,107 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = AppUI
+build_property.RootNamespace = AppUI
+build_property.ProjectDir = D:\Kaar-InfoTech\Sprint-5\Capstone-Project\Main-Project\EMS-Repo\EMS\AppUI\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Kaar-InfoTech\Sprint-5\Capstone-Project\Main-Project\EMS-Repo\EMS\AppUI
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Kaar-InfoTech/Sprint-5/Capstone-Project/Main-Project/EMS-Repo/EMS/AppUI/Views/Admin/AddEvents.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkRXZlbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaar-InfoTech/Sprint-5/Capstone-Project/Main-Project/EMS-Repo/EMS/AppUI/Views/Admin/AddSession.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkU2Vzc2lvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaar-InfoTech/Sprint-5/Capstone-Project/Main-Project/EMS-Repo/EMS/AppUI/Views/Admin/EditSession.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdFNlc3Npb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaar-InfoTech/Sprint-5/Capstone-Project/Main-Project/EMS-Repo/EMS/AppUI/Views/Admin/GetAllEvents.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cR2V0QWxsRXZlbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaar-InfoTech/Sprint-5/Capstone-Project/Main-Project/EMS-Repo/EMS/AppUI/Views/Admin/GetAllSession.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cR2V0QWxsU2Vzc2lvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaar-InfoTech/Sprint-5/Capstone-Project/Main-Project/EMS-Repo/EMS/AppUI/Views/Admin/GetAllSpeakers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cR2V0QWxsU3BlYWtlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaar-InfoTech/Sprint-5/Capstone-Project/Main-Project/EMS-Repo/EMS/AppUI/Views/Admin/SearchEvents.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU2VhcmNoRXZlbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaar-InfoTech/Sprint-5/Capstone-Project/Main-Project/EMS-Repo/EMS/AppUI/Views/Admin/Shared/AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU2hhcmVkXEFkbWluTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaar-InfoTech/Sprint-5/Capstone-Project/Main-Project/EMS-Repo/EMS/AppUI/Views/Admin/UpdateEvents.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXBkYXRlRXZlbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaar-InfoTech/Sprint-5/Capstone-Project/Main-Project/EMS-Repo/EMS/AppUI/Views/Admin/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaar-InfoTech/Sprint-5/Capstone-Project/Main-Project/EMS-Repo/EMS/AppUI/Views/CommonPage/EventCataloguePage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbW9uUGFnZVxFdmVudENhdGFsb2d1ZVBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaar-InfoTech/Sprint-5/Capstone-Project/Main-Project/EMS-Repo/EMS/AppUI/Views/CommonPage/HomePage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbW9uUGFnZVxIb21lUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaar-InfoTech/Sprint-5/Capstone-Project/Main-Project/EMS-Repo/EMS/AppUI/Views/CommonPage/Shared/CommonPageLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbW9uUGFnZVxTaGFyZWRcQ29tbW9uUGFnZUxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaar-InfoTech/Sprint-5/Capstone-Project/Main-Project/EMS-Repo/EMS/AppUI/Views/Error/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaar-InfoTech/Sprint-5/Capstone-Project/Main-Project/EMS-Repo/EMS/AppUI/Views/Login/AdminLoginPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cQWRtaW5Mb2dpblBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaar-InfoTech/Sprint-5/Capstone-Project/Main-Project/EMS-Repo/EMS/AppUI/Views/Participant/ParticipantEventCatalogue.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGljaXBhbnRcUGFydGljaXBhbnRFdmVudENhdGFsb2d1ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaar-InfoTech/Sprint-5/Capstone-Project/Main-Project/EMS-Repo/EMS/AppUI/Views/Participant/ParticipantHomePage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGljaXBhbnRcUGFydGljaXBhbnRIb21lUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaar-InfoTech/Sprint-5/Capstone-Project/Main-Project/EMS-Repo/EMS/AppUI/Views/Participant/ParticipantRegisteredEvents.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGljaXBhbnRcUGFydGljaXBhbnRSZWdpc3RlcmVkRXZlbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaar-InfoTech/Sprint-5/Capstone-Project/Main-Project/EMS-Repo/EMS/AppUI/Views/Participant/RegisterEvent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGljaXBhbnRcUmVnaXN0ZXJFdmVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaar-InfoTech/Sprint-5/Capstone-Project/Main-Project/EMS-Repo/EMS/AppUI/Views/Participant/Shared/ParticipantCommonLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGljaXBhbnRcU2hhcmVkXFBhcnRpY2lwYW50Q29tbW9uTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaar-InfoTech/Sprint-5/Capstone-Project/Main-Project/EMS-Repo/EMS/AppUI/Views/Participant/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGljaXBhbnRcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaar-InfoTech/Sprint-5/Capstone-Project/Main-Project/EMS-Repo/EMS/AppUI/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 

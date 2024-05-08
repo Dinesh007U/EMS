@@ -1,0 +1,326 @@
+﻿@model AppUI.Models.EventDetails;
+
+@{
+    ViewData["Title"] = "Update Events";
+}
+
+<style>
+    .card {
+        padding: 0px 15px;
+        border-radius: 20px;
+    }
+
+    .c1 {
+        background-color: #ff99ff;
+        border-radius: 20px;
+    }
+
+    .ac {
+        font-weight: bold;
+        color: #e0726c;
+        font-size: 12px;
+    }
+
+    input,
+    button {
+        width: 100%;
+        background-color: #fff2f1;
+        border-radius: 8px;
+        padding: 8px 17px;
+        font-size: 13px;
+        border: 1px solid #f5f0ef;
+        color: #dccece;
+    }
+
+    
+
+    form {
+        margin-top: 40px;
+    }
+
+        form > * {
+            margin: 3px 0px;
+        }
+
+    .img-illus {
+        background-color: antiquewhite;
+    }
+
+    .wlcm {
+        font-size: 30px;
+    }
+
+    .sp1 {
+        font-size: 5px;
+    }
+
+        .sp1 > span {
+            background-color: #f0c3be;
+        }
+
+    .btn-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+</style>
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-12 col-sm-10 col-md-12 col-lg-11 col-xl-10">
+            <div class="card d-flex mx-auto my-5">
+                <div class="row">
+                    <div class="col-md-5 col-sm-12 col-xs-12 c1 p-5">
+                        <div class="row justify-content-center align-items-center">
+                            <div class="w-100 text-center mb-4">
+                                <img class="img-illus" src="~/Images/illus3.png" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);" class="img-fluid" alt="Teacher">
+                            </div>
+                            <div class="w-100 text-center">
+                                <h1 class="wlcm">Update Events</h1>
+                                <div class="d-flex justify-content-center">
+                                    <span class="px-3 bg-danger rounded-pill"></span>
+                                    <span class="ml-2 px-1 rounded-circle"></span>
+                                    <span class="ml-2 px-1 rounded-circle"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-7 col-sm-12 col-xs-12 c2 px-5 pt-5">
+                        <form id="eventform" method="post">
+                            <div class="form-group my-3" style="display:none">
+                                <label asp-for="EventId" class="form-label">Event ID :</label>
+                                <input asp-for="EventId" type="text" placeholder="Enter Event ID" class="form-control" id="eventid">
+                            </div>
+                            <div class="form-group my-3">
+                                <label asp-for="EventCategory" class="form-label">Event Category :</label>
+                                <select asp-for="EventCategory" class="form-control" id="eventCategory">
+                                    <option selected disabled>Select Event Category</option>
+                                    <option value="Tech and Innovation">Tech and Innovation</option>
+                                    <option value="Industries">Industries</option>
+                                </select>
+                                <span class="text-danger mx-2"></span>
+
+                            </div>
+                            <div class="form-group my-3" id="eventNameDropdownGroup">
+                                <label asp-for="EventName" class="form-label">Event Name :</label>
+                                <select asp-for="EventName" class="form-control" id="eventNameDropdown">
+                                    <option selected disabled>Select Event Name</option>
+                                    <!-- Tech and Innovation Event Names -->
+                                    <optgroup id="techInnovationOptions" label="Tech and Innovation" style="display: block;">
+                                        <option value="Microsoft Cloud">Microsoft Cloud</option>
+                                        <option value="AI">AI</option>
+                                        <option value="Azure Space">Azure Space</option>
+                                        <option value="Mixed reality">Mixed reality</option>
+                                        <option value="Microsoft Hololens">Microsoft Hololens</option>
+                                        <option value="Microsoft Viva">Microsoft Viva</option>
+                                        <option value="Quantum computing">Quantum computing</option>
+                                        <option value="Sustainability">Sustainability</option>
+                                    </optgroup>
+                                    <!-- Industries Event Names -->
+                                    <optgroup id="industriesOptions" label="Industries" style="display: none;">
+                                        <option value="Education">Education</option>
+                                        <option value="Automotive">Automotive</option>
+                                        <option value="Financial services">Financial services</option>
+                                        <option value="Government">Government</option>
+                                        <option value="Healthcare">Healthcare</option>
+                                        <option value="Manufacturing">Manufacturing</option>
+                                        <option value="Retail">Retail</option>
+                                        <option value="All industries">All industries</option>
+                                    </optgroup>
+                                </select>
+                                <span class="text-danger mx-2"></span>
+
+                            </div>
+                            <!-- Update Event Form -->
+                            <div class="form-group my-3">
+                                <label asp-for="EventDate" class="form-label">Event Date :</label>
+                                <input asp-for="EventDate" type="date" class="form-control" id="eventDate">
+                                <span class="text-danger mx-2"></span>
+
+                            </div>
+                            <div class="form-group my-3">
+                                <label asp-for="Description" class="form-label">Description :</label>
+                                <textarea asp-for="Description" class="form-control" id="description" rows="3"></textarea>
+                                <span class="text-danger mx-2"></span>
+
+                            </div>
+                            <div class="form-group my-3">
+                                <label asp-for="Status" class="form-label">Status :</label>
+                                <select asp-for="Status" class="form-control" id="status">
+                                    <option selected disabled>Select Event Status</option>
+                                    <option>Active</option>
+                                    <option>In-Active</option>
+                                </select>
+                            </div>
+                            <div class="btn-group">
+                                <button type="submit" class="btn btn-primary">Update Event</button>
+                                <a asp-route="GetAllEvents" class="btn btn-danger mx-2">Cancel</a>
+                            </div>
+                            <br />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    $(document).ready(function () {
+
+        var eventId = '@ViewBag.EventId'; // Retrieve eventId from ViewBag
+
+        $.ajax({
+            url: 'http://localhost:53045/api/EventDetails/GetEventDetailsById/' + eventId,
+            type: 'GET',
+            success: function (data) {
+                console.log(data);
+                // Store fetched data in variables
+                var eventName = data.eventName; // Assuming the property name is 'eventName'
+                var eventDate = new Date(data.eventDate);
+                var eventDescription = data.description;
+                var eventCategory = data.eventCategory; // Assuming the property name is 'eventCategory'
+                var eventStatus = data.status
+                var formattedDate = eventDate.getFullYear() + '-' + (eventDate.getMonth() + 1).toString().padStart(2, '0') + '-' + eventDate.getDate().toString().padStart(2, '0');
+
+                // Populate form fields with fetched data
+                $('#eventid').val(eventId);
+                $('#eventNameDropdown').val(eventName);
+                $('#eventDate').val(formattedDate);
+                $('#description').val(eventDescription);
+                $('#eventCategory').val(eventCategory);
+                $('#status').val(eventStatus);
+
+                // Trigger change event for category dropdown to update event names dropdown
+                $('#eventNameDropdown').change();
+            },
+            error: function (xhr, status, error) {
+                // Handle errors
+                console.error(xhr.responseText);
+                alert('Error fetching event details. Please try again later.');
+            }
+        });
+
+
+        $("#eventform").submit(function (event) {
+
+            // Prevent the form from submitting by default
+            event.preventDefault();
+
+            // Validate form fields
+            if (validateForm()) {
+                // If form is valid, proceed with form submission
+                submitForm();
+                window.location.href = "/Admin/GetAllEvents";
+
+            }
+        });
+
+
+    });
+
+    function validateForm() {
+        // Reset validation messages
+
+        $(".text-danger").text("");
+
+        // Flag to track form validity
+        var isValid = true;
+
+        // Validate Event Category
+        if ($("#eventCategory").val() === null) {
+            $("#eventCategory").siblings(".text-danger").text("Please select an event category.");
+            isValid = false;
+        }
+
+        // Validate Event Name
+        if ($("#eventNameDropdown").val() === null) {
+            $("#eventNameDropdown").siblings(".text-danger").text("Please select an event name.");
+            isValid = false;
+        }
+
+        // Validate Event Date
+        if ($("#eventDate").val() === "") {
+            $("#eventDate").siblings(".text-danger").text("Please select an event date.");
+            isValid = false;
+        }
+
+        // Validate Description
+        if ($("#description").val().trim() === "") {
+
+            $("#description").siblings(".text-danger").text("Please enter a description.");
+
+            isValid = false;
+        }
+
+        // Return the form validity status
+        return isValid;
+    }
+
+    function submitForm() {
+        var token = '@ViewBag.tokenId'
+
+        // Get form data
+        var formData = {
+            EventId: $('#eventid').val(),
+            EventCategory: $('#eventCategory').val(),
+            EventName: $('#eventNameDropdown').val(),
+            EventDate: $('#eventDate').val(),
+            Description: $('#description').val(),
+            Status: $('#status').val()
+        };
+
+        // Send PUT request
+        $.ajax({
+            type: 'PUT',
+            url: "http://localhost:53045/api/EventDetails/UpdateEventDetails",
+            data: JSON.stringify(formData),
+            contentType: 'application/json',
+            beforeSend: function (xhr) {
+                xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+            },
+            success: function (data) {
+                // Handle success
+                console.log('Event Updated successfully');
+            },
+            error: function (error) {
+                // Handle error
+                console.error('Error Updated event:', error);
+            }
+        });
+    }
+    // Function to change event name dropdown
+    function changeEventNameDropdown() {
+        var eventCategory = $('#eventCategory').val();
+        var techInnovationOptions = $('#techInnovationOptions');
+        var industriesOptions = $('#industriesOptions');
+
+        if (eventCategory === "Tech and Innovation") {
+            techInnovationOptions.show();
+            industriesOptions.hide();
+        } else if (eventCategory === "Industries") {
+            industriesOptions.show();
+            techInnovationOptions.hide();
+        } else {
+            techInnovationOptions.hide();
+            industriesOptions.hide();
+        }
+    }
+
+    // Call the function to handle the event category change initially
+    changeEventNameDropdown();
+
+    // Add event listener for event category dropdown change
+    $('#eventCategory').change(function () {
+        changeEventNameDropdown();
+    });
+
+
+</script>
+
+
+
+

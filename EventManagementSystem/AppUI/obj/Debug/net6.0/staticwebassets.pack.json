@@ -1,0 +1,749 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\AI.jpg",
+      "PackagePath": "staticwebassets\\Images\\AI.jpg"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\Admin-bg2.jpg",
+      "PackagePath": "staticwebassets\\Images\\Admin-bg2.jpg"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\Admin-bg7.jpg",
+      "PackagePath": "staticwebassets\\Images\\Admin-bg7.jpg"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\AdminPageImage.png",
+      "PackagePath": "staticwebassets\\Images\\AdminPageImage.png"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\Azure Space.jpg",
+      "PackagePath": "staticwebassets\\Images\\Azure Space.jpg"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\Education.jpg",
+      "PackagePath": "staticwebassets\\Images\\Education.jpg"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\Financial services.jpg",
+      "PackagePath": "staticwebassets\\Images\\Financial services.jpg"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\Healthcare.jpg",
+      "PackagePath": "staticwebassets\\Images\\Healthcare.jpg"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\Kaar-Infotech-Logo.png",
+      "PackagePath": "staticwebassets\\Images\\Kaar-Infotech-Logo.png"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\Kaar-Logo.png",
+      "PackagePath": "staticwebassets\\Images\\Kaar-Logo.png"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\Kaar-Nav-Logo.png",
+      "PackagePath": "staticwebassets\\Images\\Kaar-Nav-Logo.png"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\Microsoft Cloud.jpg",
+      "PackagePath": "staticwebassets\\Images\\Microsoft Cloud.jpg"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\Microsoft Financial Service.webp",
+      "PackagePath": "staticwebassets\\Images\\Microsoft Financial Service.webp"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\Ms-Catalog-Banner1.png",
+      "PackagePath": "staticwebassets\\Images\\Ms-Catalog-Banner1.png"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\Ms-Catalog-Banner2.png",
+      "PackagePath": "staticwebassets\\Images\\Ms-Catalog-Banner2.png"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\Ms-Event1.jpg",
+      "PackagePath": "staticwebassets\\Images\\Ms-Event1.jpg"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\Ms-Event2.jpg",
+      "PackagePath": "staticwebassets\\Images\\Ms-Event2.jpg"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\Ms-Event3.jpg",
+      "PackagePath": "staticwebassets\\Images\\Ms-Event3.jpg"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\Ms-Event4.jpg",
+      "PackagePath": "staticwebassets\\Images\\Ms-Event4.jpg"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\Ms-Event5.jpg",
+      "PackagePath": "staticwebassets\\Images\\Ms-Event5.jpg"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\Ms-Event5.png",
+      "PackagePath": "staticwebassets\\Images\\Ms-Event5.png"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\Ms-Event6.jpg",
+      "PackagePath": "staticwebassets\\Images\\Ms-Event6.jpg"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\Ms-Event7.jpg",
+      "PackagePath": "staticwebassets\\Images\\Ms-Event7.jpg"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\Ms-Event7.png",
+      "PackagePath": "staticwebassets\\Images\\Ms-Event7.png"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\Ms-Event8.jpg",
+      "PackagePath": "staticwebassets\\Images\\Ms-Event8.jpg"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\Ms-Event8.png",
+      "PackagePath": "staticwebassets\\Images\\Ms-Event8.png"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\Ms-LinkedIn.svg",
+      "PackagePath": "staticwebassets\\Images\\Ms-LinkedIn.svg"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\Ms-Logo-Icon.png",
+      "PackagePath": "staticwebassets\\Images\\Ms-Logo-Icon.png"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\Ms-Logo.png",
+      "PackagePath": "staticwebassets\\Images\\Ms-Logo.png"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\Ms-Thumbnail.jpg",
+      "PackagePath": "staticwebassets\\Images\\Ms-Thumbnail.jpg"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\Ms-Video.mp4",
+      "PackagePath": "staticwebassets\\Images\\Ms-Video.mp4"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\Ms-fb.svg",
+      "PackagePath": "staticwebassets\\Images\\Ms-fb.svg"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\Ms-twitter.svg",
+      "PackagePath": "staticwebassets\\Images\\Ms-twitter.svg"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\bg-img-1.jpeg",
+      "PackagePath": "staticwebassets\\Images\\bg-img-1.jpeg"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\bg-img-2.jpg",
+      "PackagePath": "staticwebassets\\Images\\bg-img-2.jpg"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\bg5.jpg",
+      "PackagePath": "staticwebassets\\Images\\bg5.jpg"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\illus1.png",
+      "PackagePath": "staticwebassets\\Images\\illus1.png"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\illus2.png",
+      "PackagePath": "staticwebassets\\Images\\illus2.png"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\illus3.png",
+      "PackagePath": "staticwebassets\\Images\\illus3.png"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\Images\\illus4.png",
+      "PackagePath": "staticwebassets\\Images\\illus4.png"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\_accordion.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_accordion.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\_alert.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_alert.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\_badge.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_badge.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\_breadcrumb.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_breadcrumb.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\_button-group.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_button-group.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\_buttons.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_buttons.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\_card.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_card.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\_carousel.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_carousel.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\_close.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_close.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\_containers.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_containers.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\_dropdown.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_dropdown.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\_forms.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_forms.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\_functions.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_functions.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\_grid.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_grid.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\_helpers.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_helpers.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\_images.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_images.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\_list-group.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_list-group.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\_maps.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_maps.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\_mixins.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_mixins.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\_modal.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_modal.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\_nav.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_nav.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\_navbar.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_navbar.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\_offcanvas.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_offcanvas.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\_pagination.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_pagination.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\_placeholders.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_placeholders.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\_popover.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_popover.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\_progress.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_progress.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\_reboot.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_reboot.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\_root.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_root.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\_spinners.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_spinners.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\_tables.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_tables.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\_toasts.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_toasts.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\_tooltip.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_tooltip.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\_transitions.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_transitions.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\_type.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_type.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\_utilities.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_utilities.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\_variables-dark.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_variables-dark.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_variables.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\bootstrap-grid.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\bootstrap-grid.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\bootstrap-reboot.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\bootstrap-reboot.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\bootstrap-utilities.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\bootstrap-utilities.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\bootstrap.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\bootstrap.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\forms\\_floating-labels.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\forms\\_floating-labels.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\forms\\_form-check.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\forms\\_form-check.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\forms\\_form-control.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\forms\\_form-control.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\forms\\_form-range.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\forms\\_form-range.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\forms\\_form-select.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\forms\\_form-select.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\forms\\_form-text.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\forms\\_form-text.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\forms\\_input-group.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\forms\\_input-group.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\forms\\_labels.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\forms\\_labels.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\forms\\_validation.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\forms\\_validation.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\helpers\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\helpers\\_clearfix.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\helpers\\_color-bg.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\helpers\\_color-bg.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\helpers\\_colored-links.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\helpers\\_colored-links.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\helpers\\_focus-ring.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\helpers\\_focus-ring.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\helpers\\_icon-link.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\helpers\\_icon-link.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\helpers\\_position.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\helpers\\_position.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\helpers\\_ratio.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\helpers\\_ratio.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\helpers\\_stacks.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\helpers\\_stacks.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\helpers\\_stretched-link.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\helpers\\_stretched-link.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\helpers\\_text-truncation.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\helpers\\_text-truncation.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\helpers\\_visually-hidden.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\helpers\\_visually-hidden.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\helpers\\_vr.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\helpers\\_vr.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\mixins\\_alert.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_alert.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\mixins\\_backdrop.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_backdrop.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\mixins\\_banner.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_banner.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\mixins\\_border-radius.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_border-radius.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\mixins\\_box-shadow.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_box-shadow.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\mixins\\_breakpoints.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_breakpoints.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\mixins\\_buttons.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_buttons.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\mixins\\_caret.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_caret.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\mixins\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_clearfix.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\mixins\\_color-mode.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_color-mode.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\mixins\\_color-scheme.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_color-scheme.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\mixins\\_container.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_container.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\mixins\\_deprecate.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_deprecate.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\mixins\\_forms.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_forms.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\mixins\\_gradients.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_gradients.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\mixins\\_grid.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_grid.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\mixins\\_image.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_image.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\mixins\\_list-group.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_list-group.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\mixins\\_lists.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_lists.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\mixins\\_pagination.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_pagination.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\mixins\\_reset-text.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_reset-text.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\mixins\\_resize.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_resize.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\mixins\\_table-variants.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_table-variants.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\mixins\\_text-truncate.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_text-truncate.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\mixins\\_transition.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_transition.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\mixins\\_utilities.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_utilities.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\mixins\\_visually-hidden.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_visually-hidden.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\utilities\\_api.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\utilities\\_api.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\bootstrap\\scss\\vendor\\_rfs.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\vendor\\_rfs.scss"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\lib\\jquery\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\jquery.js"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\lib\\jquery\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\lib\\jquery\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\lib\\jquery\\jquery.slim.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\jquery.slim.js"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\lib\\jquery\\jquery.slim.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\jquery.slim.min.js"
+    },
+    {
+      "Id": "D:\\Kaar-InfoTech\\Sprint-5\\Capstone-Project\\Main-Project\\EMS-Repo\\EMS\\AppUI\\wwwroot\\lib\\jquery\\jquery.slim.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\jquery.slim.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.AppUI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.AppUI.props",
+      "PackagePath": "build\\AppUI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.AppUI.props",
+      "PackagePath": "buildMultiTargeting\\AppUI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.AppUI.props",
+      "PackagePath": "buildTransitive\\AppUI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

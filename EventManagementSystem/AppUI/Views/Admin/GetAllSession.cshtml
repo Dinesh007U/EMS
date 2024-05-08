@@ -1,0 +1,211 @@
+﻿
+@model AppUI.Models.Admin
+
+@{
+    ViewData["Title"] = "GetAllSession";
+
+}
+
+<style>
+    body {
+        overflow-x: hidden;
+        background: #f9f9f9; /* Light gray background */
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .container-fluid {
+        background: linear-gradient(to right, #ffffff, #f0f0f0); /* Gradient background */
+        padding: 30px; /* Add some padding for spacing */
+    }
+
+    .card {
+        border: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease;
+        margin-bottom: 20px;
+        background: #fff; /* White background */
+    }
+
+        .card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+    .card-body {
+        padding: 20px; /* Add padding inside card body */
+    }
+
+    .card-title {
+        color: #333; /* Dark color for card title */
+        font-size: 1.5rem;
+        margin-bottom: 10px; /* Reduce margin for tighter spacing */
+    }
+
+    .card-subtitle {
+        color: #007bff; /* Blue color for subtitle */
+        font-size: 1.25rem;
+        margin-bottom: 5px; /* Reduce margin for tighter spacing */
+    }
+
+    .card-text {
+        color: #555; /* Dark gray color for text */
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .outline-container {
+        padding: 10px; /* Add padding inside containers */
+        border-radius: 10px; /* Rounded corners */
+    }
+
+    .btn-secondary {
+        background-color: #6c757d; /* Dark gray background for secondary buttons */
+        border-color: #6c757d; /* Dark gray border color */
+    }
+
+        .btn-secondary:hover {
+            background-color: #5a6268; /* Darker gray background on hover */
+            border-color: #545b62; /* Darker gray border color on hover */
+        }
+
+    .btn-primary {
+        background-color: #007bff; /* Blue background for primary buttons */
+        border-color: #007bff; /* Blue border color */
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3; /* Darker blue background on hover */
+            border-color: #0056b3; /* Darker blue border color on hover */
+        }
+
+    .hr {
+        border-top: 1px solid #ccc; /* Light gray horizontal line */
+    }
+</style>
+
+<!-- Modal for Deleting Session Details -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Confirm Deletion</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete <span id="speakerNamePlaceholder"></span>?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger" id="confirmDelete">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@* Total Number of Session count *@
+@{
+    var countSession = Model.SessionAndSpeakerDetails.Count();
+}
+<!-- Container for displaying event and session details -->
+<div class="container-fluid">
+    <h2 class="text-center mb-4">Event with All Sessions</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="container">
+                <div class="card">
+                    <!-- Event Details -->
+                    <div class="card-body">
+                        <h4 class="card-title">Event Details:</h4>
+                        <h5 class="card-subtitle">@Model.AllEventDetails.EventName</h5>
+                        <h5 class="card-subtitle text-muted">@Model.AllEventDetails.EventDate.ToString("D")</h5>
+                        <h5 class="card-text">Event Description:</h5>
+                        <p class="card-text">@Model.AllEventDetails.Description</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center p-3">
+                        <!-- Add padding -->
+                        <a class="btn btn-secondary" asp-route="AddSession" asp-route-id=@Model.AllEventDetails.EventId>
+                            <i class="bi bi-plus-square-fill"></i>
+                            New Session
+                        </a>
+                        <div>
+                            <a class="btn btn-primary">
+                                Total Sessions: <span class="badge text-bg-secondary">@countSession</span>
+                            </a>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!-- Heading for available sessions -->
+            <h4 class="text-center">Available Sessions:</h4>
+            <hr class="hr" />
+            <!-- Loop through each session to display details -->
+            @foreach (var session in Model.SessionAndSpeakerDetails)
+            {
+                <div class="container outline-container">
+                    <div class="card">
+                        <div class="card-body d-flex justify-content-between align-items-start">
+                            <div>
+                                <!-- Session Title and Description -->
+                                <h5 class="card-title">@session.Key.SessionTitle</h5>
+                                <p class="card-text">@session.Key.Description</p>
+                                <p class="card-text">@session.Key.SessionStart.ToString("h:mm tt") to @session.Key.SessionEnd.ToString("h:mm tt")</p>
+                                <!-- Speaker Name -->
+                                <h5 class="card-subtitle">Speaker Name:</h5>
+                                <p class="card-text">@session.Value.SpeakerName</p>
+                            </div>
+                            <!-- Button to edit session -->
+                            <div class="d-flex flex-column align-items-end">
+                                <br />
+                                <a asp-route="EditSession" class="btn btn-primary edit-event-btn" name="" asp-route-id=@session.Key.SessionId>
+                                    <i class="bi bi-pencil-square"></i>
+                                </a>
+                                <br />
+                                <!-- Button to delete session -->
+                                <a class="btn btn-danger delete-session-btn" data-id=@session.Key.SessionId data-name=@session.Key.SessionTitle>
+                                    <i class="bi bi-trash"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+            <hr/>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        $(".delete-session-btn").click(function () {
+            var sessionId = $(this).data("id");
+            var sessionTitle = $(this).data("name");
+            console.log(sessionId);
+            console.log(sessionTitle);
+            // Set session title in modal
+            $("#sessionTitlePlaceholder").text(sessionTitle);
+
+            // Store session ID in the delete button's data attribute
+            $('#confirmDelete').data('id', sessionId);
+
+            // Show the modal
+            $("#deleteModal").modal("show");
+        });
+
+        // When confirm delete button is clicked
+        $("#confirmDelete").click(function () {
+            var sessionId = $(this).data('id');
+            console.log(sessionId);
+            // Hide the modal
+            $("#deleteModal").modal("hide");
+
+            // Redirect to the delete action with the session ID
+            window.location.href = "/Admin/DeleteSession/" + sessionId + "/@Model.AllEventDetails.EventId";
+        });
+    });
+
+
+</script>

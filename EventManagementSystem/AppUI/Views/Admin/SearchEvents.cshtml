@@ -1,0 +1,302 @@
+﻿@model AppUI.Models.EventDetails;
+
+@{
+    ViewData["Title"] = "SearchEvents";
+}
+
+
+
+<!-- Container for search event details -->
+<div class="container">
+    <!-- Search Event Details Form -->
+    <div class="center-form">
+        <h2 class="text-center">Search Event Details</h2>
+        <!-- Event Category Dropdown -->
+        <div class="form-group my-2">
+            <label asp-for="EventCategory" class="form-label">Event Category :</label>
+            <select asp-for="EventCategory" class="form-control" id="eventCategory">
+                <option selected disabled>Select Event Category</option>
+                <option value="Tech and Innovation">Tech and Innovation</option>
+                <option value="Industries">Industries</option>
+            </select>
+            <!-- Validation message for event category selection -->
+            <div><span id="eventCategoryValidationMessage" class="text-danger mx-2" style="visibility:hidden">Event Category is required</span></div>
+        </div>
+        <!-- Event Name Dropdown -->
+        <div class="form-group my-2" id="eventNameDropdownGroup">
+            <label asp-for="EventName" class="form-label">Event Name :</label>
+            <select asp-for="EventName" class="form-control" id="eventNameDropdown">
+                <option selected disabled>Select Event Name</option>
+                <!-- Tech and Innovation Event Names -->
+                <optgroup id="techInnovationOptions" label="Tech and Innovation" style="display: block;">
+                    <option value="Microsoft Cloud">Microsoft Cloud</option>
+                    <option value="AI">AI</option>
+                    <option value="Azure Space">Azure Space</option>
+                    <option value="Mixed reality">Mixed reality</option>
+                    <option value="Microsoft HoloLens">Microsoft HoloLens</option>
+                    <option value="Microsoft Viva">Microsoft Viva</option>
+                    <option value="Quantum computing">Quantum computing</option>
+                    <option value="Sustainability">Sustainability</option>
+                </optgroup>
+                <!-- Industries Event Names -->
+                <optgroup id="industriesOptions" label="Industries" style="display: none;">
+                    <option value="Education">Education</option>
+                    <option value="Automotive">Automotive</option>
+                    <option value="Financial services">Financial services</option>
+                    <option value="Government">Government</option>
+                    <option value="Healthcare">Healthcare</option>
+                    <option value="Manufacturing">Manufacturing</option>
+                    <option value="Retail">Retail</option>
+                    <option value="All industries">All industries</option>
+                </optgroup>
+
+            </select>
+            <div><span id="eventNameValidationMessage" class="text-danger mx-2" style="visibility:hidden">Event Name is required</span></div>
+        </div>
+        <button type="button" id="searchEventBtn" class="btn btn-primary">Search Event</button>
+        <a asp-route="GetAllEvents" class="btn btn-danger mx-2">Cancel</a>
+    </div>
+</div>
+
+<!-- Delete Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Confirm Delete</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Element to display the event name -->
+                <p id="eventNameToDelete"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="custom-eventsearch-container">
+    <table id="searchtable">
+    </table>
+</div>
+
+<script>
+
+    $(document).ready(function () {
+        // Function to change event name dropdown
+        function changeEventNameDropdown() {
+            var eventCategory = $('#eventCategory').val();
+            var techInnovationOptions = $('#techInnovationOptions');
+            var industriesOptions = $('#industriesOptions');
+
+            if (eventCategory === "Tech and Innovation") {
+                techInnovationOptions.show();
+                industriesOptions.hide();
+            } else if (eventCategory === "Industries") {
+                industriesOptions.show();
+                techInnovationOptions.hide();
+            } else {
+                techInnovationOptions.hide();
+                industriesOptions.hide();
+            }
+        }
+
+        // Call the function to handle the event category change initially
+        changeEventNameDropdown();
+
+        // Add event listener for event category dropdown change
+        $('#eventCategory').change(function () {
+            changeEventNameDropdown();
+        });
+
+        // AJAX search functionality
+        $('#searchEventBtn').click(function () {
+
+            var eventNameDropdownValue = $('#eventNameDropdown').val();
+            var eventCategoryDropdownValue = $('#eventCategory').val();
+
+            if (eventNameDropdownValue === null && eventCategoryDropdownValue === null) {
+                // Show both validation messages
+                var a = document.getElementById("eventNameValidationMessage");
+                a.style.visibility = "visible";
+                var b = document.getElementById("eventCategoryValidationMessage");
+                b.style.visibility = "visible";
+
+            }
+
+            if (eventNameDropdownValue === null && eventCategoryDropdownValue !== null) {
+                // Show validation message for event name
+                var a = document.getElementById("eventNameValidationMessage");
+                a.style.visibility = "visible";
+                var b = document.getElementById("eventCategoryValidationMessage");
+                b.style.visibility = "hidden";
+
+            }
+
+            if (eventNameDropdownValue !== null && eventCategoryDropdownValue !== null) {
+                // Show validation message for event name
+                var a = document.getElementById("eventNameValidationMessage");
+                a.style.visibility = "hidden";
+                var b = document.getElementById("eventCategoryValidationMessage");
+                b.style.visibility = "hidden";
+
+            }
+
+            var eventName = $('#eventNameDropdown').val();
+            console.log(eventName);
+            // Perform AJAX request
+            $.ajax({
+                url: 'http://localhost:53045/api/EventDetails/GetEventDetailsByName/' + eventName, // Replace ControllerName and ActionName with your controller and action names
+                type: 'GET', // or 'POST' based on your requirement
+                success: function (data) {
+                    // Handle success
+                    console.log("success");
+                    // Clear previous search results
+                    $('#searchtable').empty();
+
+                    var counter = 1;
+                    var titleAdded = false;
+
+                    // Append new search results
+                    $.each(data, function (index, event) {
+
+                        if (!titleAdded) {
+                            var title = `<tr>
+                                                    <td colspan="2" class="search-results-title">
+                                                        <h3>
+                                                            Search Results
+                                                        </h3>
+                                                     </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th class="searchtable-th">S.No</th>
+                                                    <th class="searchtable-th">Event Details</th>
+                                                  </tr>`
+                            $('#searchtable').append(title);
+                            titleAdded = true;
+                        } // Determine status color based on event status
+                        var statusColor = event.status.toLowerCase() === 'active' ? 'text-success' : 'text-danger';
+                        var row = `
+                                       <tr>
+                                            <td class="accordion-tds">
+                                                ${counter++}
+                                            </td>
+                                                <td class="set-accordion-width accordion-tds">
+                                                <div class="accordion" id="accordion-container">
+                                                    <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${index}" aria-expanded="false" aria-controls="collapse${index}">
+                                                            ${event.eventName}
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapse${index}" class="accordion-collapse collapse" data-bs-parent="#accordion-container">
+                                                        <div class="accordion-body">
+                                                            <strong class="acc-content1"> <i class="fa fa-calendar" aria-hidden="true"></i> ${formatDate(event.eventDate)} </strong> <br>
+                                                            <strong class="acc-content2"> <i class="fa fa-globe" aria-hidden="true"></i> ${event.eventCategory} </strong> <br>
+                                                            <p class="acc-content3"> <i class="fa fa-info-circle" aria-hidden="true"></i> ${event.description} </p> <br>
+                                                                <p class="acc-content4 ${statusColor}"> <i class="fa fa-hourglass-start" aria-hidden="true"></i> ${event.status} </p> <br>
+                                                                <button class="btn btn-success view-sessions-btn" data-id="${event.eventId}"> View Sessions <i class="fa fa-info-circle" aria-hidden="true"></i> </button>
+                                                                <button class="btn btn-primary edit-event-btn" data-id="${event.eventId}"> Edit Event <i class="fa fa-pencil-square-o" aria-hidden="true"></i> </button>
+                                                                <button class="btn btn-danger delete-event-btn" data-id="${event.eventId}" data-name="${event.eventName}"> Delete Event <i class="fa fa-trash" aria-hidden="true"></i> </button>
+
+                                                        </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                           </td>
+                                         </tr>`;
+                        $('#searchtable').append(row);
+                    });
+
+                    function formatDate(dateTimeString) {
+                        const date = new Date(dateTimeString);
+                        const options = { day: '2-digit', month: 'short', year: 'numeric' };
+                        return date.toLocaleDateString('en-US', options);
+                    }
+
+
+                    var allPanelsAdded = ($('#accordion-container .accordion-item').length === data.length);
+
+
+                    if (allPanelsAdded) {
+                        new bootstrap.Collapse(document.getElementById('accordion-container'), {
+                            toggle: false // Ensures accordion panels start closed
+                        });
+                    }
+                },
+                error: function (error) {
+                    // Handle error
+                    console.log("Error with Searching : ", error);
+                }
+            });
+        });
+
+        $(document).on('click', '.edit-event-btn', function () {
+            // Retrieve the event ID from the clicked button's data-id attribute
+            var eventId = $(this).data('id');
+
+            // Log the event ID to the console (for demonstration)
+            console.log("Event ID:", eventId);
+            window.location.href = "/Admin/UpdateEvents/" + eventId;
+
+        });
+
+        //View All Sessions
+        $(document).on('click', '.view-sessions-btn', function () {
+            var eventId = $(this).data('id');
+            console.log("Event ID:", eventId);
+            window.location.href = "/Admin/GetAllSession/" + eventId;
+        });
+
+
+
+    });
+
+
+    $(document).ready(function () {
+        // Event listener for delete button
+        $(document).on('click', '.delete-event-btn', function () {
+            // Retrieve the event ID and name from the clicked button's data attributes
+            var eventId = $(this).data('id');
+            var eventName = $(this).data('name');
+            // Set the event name in the modal
+            $('#eventNameToDelete').text('Are you sure you want to delete the event ' + eventName + '?');
+
+            $('#confirmDeleteBtn').data('id', eventId);
+            // Open the Bootstrap modal
+            $('#deleteModal').modal('show');
+        });
+
+        // Event listener for delete button inside the modal
+        $('#confirmDeleteBtn').on('click', function () {
+            var token = '@ViewBag.tokenId'
+
+            var eventId = $(this).data('id'); // Retrieve the event ID from the button
+            console.log(eventId);
+            $.ajax({
+                url: 'http://localhost:53045/api/EventDetails/RemoveEventDetails/' + eventId,
+                method: 'DELETE',
+                beforeSend: function (xhr) {
+                    xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+                },
+                success: function (response) {
+                    $('#deleteModal').modal('hide');
+                    // Remove the deleted event from the UI
+                    $('#collapse' + eventId).closest('.accordion-item').remove();
+                    window.location.href = "/Admin/GetAllEvents";
+                },
+                error: function (xhr, status, error) {
+                    console.error('Error deleting event:', error);
+                    alert('Failed to delete event. Please try again later.');
+                }
+            });
+        });
+    });
+
+</script>
+
+
+

@@ -1,0 +1,194 @@
+﻿
+@{
+    ViewData["Title"] = "RegisterEvent";
+    Layout = "~/Views/Participant/Shared/ParticipantCommonLayout.cshtml";
+}
+
+@model AppUI.Models.EventsWithSessionDetails
+
+<style>
+    
+    .sessiontable {
+        background-color: rgb(255,243,205);
+        border-radius: 15px;
+        text-align: center;
+    }
+
+    .sessiontable th {
+        padding: 15px;
+        border: 1px solid white;
+    }
+
+    .sessiontable td {
+        padding: 15px;
+        background-color: white;
+        background-color: lightcyan;
+        border: 1px solid rgb(255,243,205);
+    }
+
+    .speakertable {
+        background-color: rgb(255,243,205);
+        border-radius: 15px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .speakertable th {
+        padding: 15px;
+        border: 1px solid white;
+    }
+
+    .speakertable td {
+        padding: 15px;
+        background-color: white;
+        background-color: lightcyan;
+        border: 1px solid rgb(255,243,205);
+    }
+
+    .speakertable-name {
+        width: 300px;
+    }
+</style>
+ 
+<div class="container-register">
+    <!-- Display event name -->
+    <div class="adminImage">
+        <div class="container">
+            <h2 class="text-secondary">@Model.EventInformations.EventCategory</h2>
+            <h2 class="text-dark">@Model.EventInformations.EventName</h2>
+            <h3 class="text-secondary">@Model.EventInformations.EventDate.ToString("D")</h3>
+        </div>
+
+    </div>
+    <!-- Display registration status messages based on event status and registration status -->
+@if(Model.isRegister && Model.EventInformations.Status=="Active")
+{
+        <p class="text-success already-registered-text"> <span class="mx-1">&#9989;</span>You have already registered this event</p>
+}
+ @if(Model.EventInformations.Status!="Active")
+ {
+        <p class="text-danger already-registered-text"><i class="fa fa-exclamation-circle mx-1" style="color:red"></i>This event is expired</p>
+
+ }
+    <!-- Event details -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Display event date, description, and sessions -->
+                <div>
+                    <h4>@Model.EventInformations.EventDate.ToString("D")</h4>
+                    <p class="text-dark mt-3">Delivery Language: English</p>
+                    <h3 class="mt-2">Event Description:</h3>
+                    <p>@Model.EventInformations.Description</p>
+                    <!-- Display status message for attended events -->
+                    @if(@Model.isAttended && Model.EventInformations.Status=="Active")
+                      {
+                        <p>Status:<b class="text-success">You already attended this event</b></p>
+                      }
+                    <!-- Display event sessions -->
+                    <h3 class="mt-2">Sessions:</h3>
+                    @if (Model.SessionDetails.Any())
+                    {
+                        <!-- Display session details in a table -->
+                        <table class="sessiontable">
+                            <thead>
+                                <tr>
+                                    <th>S.no</th>
+                                    <th>Session Title</th>
+                                    <th>Start Time</th>
+                                    <th>End Time</th>
+                                    <!-- Display session URL if user is registered -->
+                                    @if (Model.isRegister)
+                                    {
+                                        <th>Session Url</th>
+                                    }
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    int serialNumber = 1;
+                                }
+                                @foreach (var session in Model.SessionDetails)
+                                {
+                                    <tr>
+                                        <td>@serialNumber</td>
+                                        @{
+                                            serialNumber++;
+                                        }
+                                        <td>@session.SessionTitle</td>
+                                        <td>@session.SessionStart.ToString("h:mm tt")</td>
+                                        <td>@session.SessionEnd.ToString("h:mm tt")</td>
+                                        <!-- Display session URL if user is registered -->
+                                        @if (Model.isRegister)
+                                        {
+                                            <td><a  asp-route="isAttendedModify" asp-route-email=@ViewBag.EmailId asp-route-id=@Model.EventInformations.EventId class="mx-2">Link</a></td>
+                                        }
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    }
+                    else
+                    {
+                        <p>No Sessions assigned for this event.</p>
+                    }
+                    <!-- Display speakers -->
+                    <h3 class="mt-2">Speakers:</h3>
+
+                    @if (Model.SpeakersInformations.Any())
+                    {
+                        <!-- Display speaker details in a table -->
+                        <table class="speakertable">
+                            <thead>
+                                <tr>
+                                    <th>S.No</th>
+                                    <th class="speakertable-name">Speaker Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    int serialNumber = 1;
+                                }
+                                @foreach (var speaker in Model.SpeakersInformations)
+                                {
+                                    <tr>
+                                        <td>@serialNumber</td> <!-- Display and increment serialNumber -->
+                                        @{
+                                            serialNumber++;
+                                        }
+                                        <td class="speakertable-name">@speaker.SpeakerName</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    }
+                    else
+                    {
+                        <p>No speakers assigned for this event.</p>
+                    }
+
+                </div>
+            </div>
+            <!-- Registration form -->
+            @if (!Model.isRegister && Model.EventInformations.Status == "Active")
+            {
+                var email = ViewBag.EmailId;
+                <div class="col-md-6">
+                    <!-- Content for second column goes here -->
+                    <form method="post">
+                        <div class="form-control">
+                            <h2 class="text-center">Register Now</h2>
+                            <label for="email" class="form-label">Email</label>
+                            <input type="text" name="email" value=@email class="form-control mb-3" disabled>
+                            <label for="userName" class="form-label">UserName</label>
+                            <input type="text" name="userName" value=@ViewBag.UserName class="form-control" disabled>
+                            <!-- Submit button to register for the event -->
+                            <input class="btn btn-primary mt-3" type="submit" asp-route="RegisteringNewEvent" asp-route-email=@email asp-route-id=@Model.EventInformations.EventId value="Register">
+                        </div>
+                    </form>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,187 @@
+﻿@{
+    ViewData["Title"] = "EventCataloguePage";
+    Layout = "~/Views/CommonPage/Shared/CommonPageLayout.cshtml";
+
+}
+
+<!-- Banner part starts here  -->
+
+<div id="banner-container">
+    <img src="~/Images/Ms-Catalog-Banner2.png" alt="Ms-Events-Banner" class="events-banner-img">
+    <h1 class="banner-container-head">Further your goals with Microsoft events</h1>
+    <p class="banner-container-body">Whether you're a developer, IT professional, partner, educator, or business professional, we have plenty of Microsoft events specifically created with your growth in mind. Explore special events and learning opportunities created to help you expand your expertise, learn new skills, and build community.</p>
+</div>
+
+<!-- Banner part Ends here  -->
+<!-- All Events part starts here -->
+
+<script>
+    $(document).ready(function () {
+        $(document).on('click', '.custom-register', function () {
+            var eventId = $(this).data('eventId');
+            registerEvent(eventId);
+        });
+        // Function to fetch event data from the API and populate event cards
+        $.ajax({
+            url: 'http://localhost:53045/api/eventDetails/getalleventdetails',
+            method: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                var eventCount = 0; // Counter to keep track of the number of events added
+                var eventCardsContainer = $('#eventCardsContainer');
+
+                // Iterate through each event in the response
+                $.each(data, function (index, event) {
+                    // Generate HTML for each event card
+                    var eventDate = new Date(event.eventDate);
+                    var formattedDate = eventDate.toDateString();
+                    var eventCardHTML = `
+                                    <div class="col-md-3">
+                                        <div class="card custom-card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">${event.eventName}</h5>
+                                                <p class="card-text"><i class="fa fa-calendar" aria-hidden="true"></i>${formattedDate}</p>
+                                                <p class="card-text"><i class="fa fa-globe" aria-hidden="true"></i>${event.eventCategory}</p>
+                                                <p class="card-text">${event.description}</p>
+                                                <a href="#" data-event-id="${event.eventId}" class="btn btn-primary custom-register">Registration and Details <i class="fa fa-angle-right mx-1"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                `;
+
+                    // Append the event card HTML to the container
+                    eventCardsContainer.append(eventCardHTML);
+
+                    // Increment the event count
+                    eventCount++;
+
+                    // If the event count is a multiple of 4, start a new row
+                    if (eventCount % 4 === 0) {
+                        eventCardsContainer.append('<div class="w-100 mt-2"></div>'); // Add a new row
+                    }
+                });
+            },
+            error: function (xhr, status, error) {
+                console.error('Error fetching event data:', error);
+            }
+        });
+        function registerEvent(eventId) {
+            // Use eventId to construct the registration URL
+            var registrationUrl = '/ParticipantLogin/AzureLogin';
+
+            // Redirect the user to the registration URL or perform any other action
+            window.location.href = registrationUrl;
+        }
+    });
+</script>
+
+<!-- Container for Search -->
+<div class="container-fluid bg-body-secondary allevents-bg">
+    <h2 class="text-dark pt-4 pb-3 mx-5">All Events</h2>
+    <div>
+        <!-- Search Box Form -->
+        <form class="form-inline search-box" >
+            <!-- Search input field -->
+            <input class="input-search-box" type="search" id="SearchButton" placeholder="Search Events" aria-label="Search">
+            <!-- Button to cancel search -->
+            <button class=" btn btn-danger cancel-search-box" onclick="toggleSearch()">Cancel</button>
+        </form>
+    </div>
+   @*  <div>
+        <a class="text-light btn btn-primary search-events-btn" href="#" onclick="toggleSearch()">Search Events <i class="fa fa-search mx-1" aria-hidden="true"></i></a>
+    </div> *@
+    <!-- Event Cards Container -->
+    <div class="row mx-4 pt-4" id="eventCardsContainer">
+        <!-- Event cards will be dynamically added here -->
+    </div>
+</div>
+
+<script>
+
+    $(document).ready(function () {
+
+        // Functionality to filter events when searching
+        $('#SearchButton').on('input', function () {
+            var input = $(this).val().trim().toLowerCase();
+            console.log(input);
+            // AJAX request to retrieve filtered events
+            $.ajax({
+                url: 'http://localhost:53045/api/EventDetails/GetAllEventDetails',
+                type: 'GET',
+                success: function (events) {
+                    // Filter events based on search input
+                    var filteredevents = events.filter(function (event) {
+                        return event.eventName.toLowerCase().includes(input) || event.eventCategory.toLowerCase().includes(input);
+                    });
+                    updateEventTable(filteredevents);
+                },
+                error: function () {
+                    console.error("Error in search");
+                }
+            });
+        });
+
+        // Function to update the event table with filtered events
+        function updateEventTable(filteredevents) {
+            // Clear the event cards container
+            $('#eventCardsContainer').empty();
+
+            var eventCount = 0;
+            var eventCardsContainer = $('#eventCardsContainer');
+
+            // Iterate through each filtered event
+            $.each(filteredevents, function (index, event) {
+                // Generate HTML for each event card
+                var eventDate = new Date(event.eventDate);
+                var formattedDate = formatDate(eventDate);
+                var eventCardHTML = `
+                                <div class="col-md-3">
+                                    <div class="card custom-card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">${event.eventName}</h5>
+                                            <p class="card-text"><i class="fa fa-calendar" aria-hidden="true"></i>${formattedDate}</p>
+                                            <p class="card-text"><i class="fa fa-globe" aria-hidden="true"></i>${event.eventCategory}</p>
+                                            <p class="card-text">${event.description}</p>
+                                            <a href="#" data-event-id="${event.eventId}" class="btn btn-primary custom-register">Registration and Details <i class="fa fa-angle-right mx-1"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            `;
+
+                // Append the event card HTML to the container
+                eventCardsContainer.append(eventCardHTML);
+
+                // Increment the event count
+                eventCount++;
+
+                // If the event count is a multiple of 4, start a new row
+                if (eventCount % 4 === 0) {
+                    eventCardsContainer.append('<div class="w-100 mt-2"></div>'); // Add a new row
+                }
+            });
+        }
+        // Function to format a given date string into a localized date format
+        function formatDate(dateTimeString) {
+            const date = new Date(dateTimeString);
+            const options = { day: '2-digit', month: 'short', year: 'numeric' };
+            return date.toLocaleDateString('en-US', options);
+        }
+
+        $('.cancel-search-box').on('click', function () {
+            document.getElementById('SearchButton').value = '';
+
+            // Trigger input event to reload all events
+            $('#SearchButton').trigger('input');
+        
+        });
+    
+
+    });
+
+   
+
+
+
+
+</script>
+
