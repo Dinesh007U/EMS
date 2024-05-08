@@ -1,0 +1,16 @@
+D:\Kaar-InfoTech\Sprint-5\Capstone-Project\Main-Project\EMS-Repo\EMS\DAL\bin\Debug\net6.0\appSettings.json
+D:\Kaar-InfoTech\Sprint-5\Capstone-Project\Main-Project\EMS-Repo\EMS\DAL\bin\Debug\net6.0\DAL.deps.json
+D:\Kaar-InfoTech\Sprint-5\Capstone-Project\Main-Project\EMS-Repo\EMS\DAL\bin\Debug\net6.0\DAL.runtimeconfig.json
+D:\Kaar-InfoTech\Sprint-5\Capstone-Project\Main-Project\EMS-Repo\EMS\DAL\bin\Debug\net6.0\DAL.dll
+D:\Kaar-InfoTech\Sprint-5\Capstone-Project\Main-Project\EMS-Repo\EMS\DAL\bin\Debug\net6.0\DAL.pdb
+D:\Kaar-InfoTech\Sprint-5\Capstone-Project\Main-Project\EMS-Repo\EMS\DAL\obj\Debug\net6.0\DAL.csproj.AssemblyReference.cache
+D:\Kaar-InfoTech\Sprint-5\Capstone-Project\Main-Project\EMS-Repo\EMS\DAL\obj\Debug\net6.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Kaar-InfoTech\Sprint-5\Capstone-Project\Main-Project\EMS-Repo\EMS\DAL\obj\Debug\net6.0\DAL.AssemblyInfoInputs.cache
+D:\Kaar-InfoTech\Sprint-5\Capstone-Project\Main-Project\EMS-Repo\EMS\DAL\obj\Debug\net6.0\DAL.AssemblyInfo.cs
+D:\Kaar-InfoTech\Sprint-5\Capstone-Project\Main-Project\EMS-Repo\EMS\DAL\obj\Debug\net6.0\DAL.csproj.CoreCompileInputs.cache
+D:\Kaar-InfoTech\Sprint-5\Capstone-Project\Main-Project\EMS-Repo\EMS\DAL\obj\Debug\net6.0\DAL.sourcelink.json
+D:\Kaar-InfoTech\Sprint-5\Capstone-Project\Main-Project\EMS-Repo\EMS\DAL\obj\Debug\net6.0\DAL.dll
+D:\Kaar-InfoTech\Sprint-5\Capstone-Project\Main-Project\EMS-Repo\EMS\DAL\obj\Debug\net6.0\refint\DAL.dll
+D:\Kaar-InfoTech\Sprint-5\Capstone-Project\Main-Project\EMS-Repo\EMS\DAL\obj\Debug\net6.0\DAL.pdb
+D:\Kaar-InfoTech\Sprint-5\Capstone-Project\Main-Project\EMS-Repo\EMS\DAL\obj\Debug\net6.0\DAL.genruntimeconfig.cache
+D:\Kaar-InfoTech\Sprint-5\Capstone-Project\Main-Project\EMS-Repo\EMS\DAL\obj\Debug\net6.0\ref\DAL.dll
