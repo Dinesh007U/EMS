@@ -43,3 +43,4 @@ The project structure consists of three main layers:
   - **Models**: Contains entity classes defining the database structure.
 
 Overall, the EMS project aims to provide a seamless experience for both administrators and participants/subscribers in managing and attending virtual events across diverse categories, employing modern technologies and best practices in software development.
+-- Migrations - https://dotnettutorials.net/lesson/code-based-migration-in-entity-framework-code-first/
